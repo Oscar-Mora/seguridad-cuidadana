@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .content-auto {
+    content-visibility: auto;
+  }
+}
+.Card{
+  @apply w-48 h-64 shadow-xl rounded-lg flex-none transition-all hover:-translate-y-3 hover:shadow-xl
+}
+.tittleSection{
+  @apply text-3xl pt-4 pb-6 mt-6 font-semibold text-principal
+}
+.scrollX{
+  @apply w-auto h-72 flex flex-row mt-6 space-x-4 items-center overflow-x-scroll overflow-y-hidden
+}
+.cardCover{@apply w-full h-3/5 bg-cover rounded-t-lg
+}
+.cardInfo{
+  @apply w-full h-2/5 bg-secondary rounded-b-lg dark:bg-gray-700
+}
+.cardInfoTitle{
+  @apply px-4 py-2 text-white text-xl font-bold
+}
+.cardInfoSubtitle{ @apply px-4 text-white  text-base
+}
+
+.Card:nth-child(even)
+.cardInfo{
+ @apply bg-white dark:bg-gray-800;
+}
+.Card:nth-child(even)
+.cardInfoTitle,
+.Card:nth-child(even)
+.cardInfoSubtitle{
+@apply text-tertiary dark:text-white
+}
+
+.cardBgStays{@apply w-full h-96 bg-cover rounded-xl}
+.cardTitle{@apply text-3xl px-8 pt-8 pb-2 font-semibold text-white}
+.cardSubtitle{@apply text-base pl-8 mr-24 text-white}
+
+.faqcontent{
+  @apply w-full h-full px-4
+}
+.faqT{
+  @apply text-xl font-medium text-principal dark:text-white
+}
+.faqQ{
+  @apply text-base pt-2 dark:text-white
+}
